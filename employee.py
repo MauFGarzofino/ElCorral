@@ -4,7 +4,6 @@ import re
 import random
 import string
 from tkinter import *
-import ult.centrar as ult
 from tkinter import messagebox
 from tkinter import ttk
 from time import strftime
@@ -18,7 +17,6 @@ root = Tk()
 
 root.geometry("1366x768")
 root.title("Usuario Empleado")
-ult.centrar_ventana(root,1366,768)
 
 
 user = StringVar()
@@ -92,7 +90,6 @@ class login_page:
 
     def __init__(self, top=None):
         top.geometry("1366x768")
-        ult.centrar_ventana(top,1366,768)
         top.resizable(0, 0)
         top.title("Retail Manager")
 
@@ -188,7 +185,6 @@ def exitt():
 class bill_window:
     def __init__(self, top=None):
         top.geometry("1366x768")
-        ult.centrar_ventana(top,1366,768)
         top.resizable(0, 0)
         top.title("Billing System")
 

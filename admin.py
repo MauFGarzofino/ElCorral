@@ -5,7 +5,6 @@ import random
 import string
 from tkinter import *
 from tkinter import messagebox
-import ult.centrar as ult
 from tkinter import ttk
 from time import strftime
 from tkinter.font import BOLD
@@ -16,7 +15,6 @@ from tkinter import scrolledtext as tkst
 
 root = Tk()
 root.geometry("1366x768")
-ult.centrar_ventana(root,1366,768)
 root.title("ChurrasqueriaAPP")
 
 
@@ -199,7 +197,6 @@ def menu6():
 class Admin_Page:
     def __init__(self, top=None):
         top.geometry("1366x768")
-        ult.centrar_ventana(top,1366,768)
         top.resizable(0, 0)
         top.title("Modo: ADMIN")
 
@@ -284,7 +281,6 @@ class Admin_Page:
 class Inventory:
     def __init__(self, top=None):
         top.geometry("1366x768")
-        ult.centrar_ventana(top,1366,768)
         top.resizable(0, 0)
         top.title("Inventario")
 
@@ -926,7 +922,6 @@ class Update_Product:
 class Employee:
     def __init__(self, top=None):
         top.geometry("1366x768")
-        ult.centrar_ventana(top,1366,768)
         top.resizable(0, 0)
         top.title("Employee Management")
 
@@ -1554,7 +1549,6 @@ class Update_Employee:
 class Invoice:
     def __init__(self, top=None):
         top.geometry("1366x768")
-        ult.centrar_ventana(top,1366,768)
         top.resizable(0, 0)
         top.title("Invoices")
 
