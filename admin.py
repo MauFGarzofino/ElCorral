@@ -292,15 +292,15 @@ class Inventory:
 
         self.label1 = Label(inv)
         self.label1.place(relx=0, rely=0, width=1366, height=768)
-        self.img = PhotoImage(file="./images/inventory.png")
+        self.img = PhotoImage(file="./images/GestInventario.png")
         self.label1.configure(image=self.img)
 
         self.message = Label(inv)
         self.message.place(relx=0.046, rely=0.055, width=136, height=30)
         self.message.configure(font="-family {Poppins} -size 10")
-        self.message.configure(foreground="#000000")
-        self.message.configure(background="#ffffff")
-        self.message.configure(text="""ADMIN""")
+        self.message.configure(foreground="#FFFFFF")
+        self.message.configure(background="#3C3D52")
+        self.message.configure(text="""ROL: ADMIN""")
         self.message.configure(anchor="w")
 
         self.clock = Label(inv)
@@ -321,7 +321,7 @@ class Inventory:
         self.button1.configure(activebackground="palevioletred")
         self.button1.configure(cursor="hand2")
         self.button1.configure(foreground="#ffffff")
-        self.button1.configure(background="#d46c91")
+        self.button1.configure(background="#3C3D52")
         self.button1.configure(font="-family {Poppins SemiBold} -size 10")
         self.button1.configure(borderwidth="0")
         self.button1.configure(text="""BUSCAR""")
@@ -334,7 +334,7 @@ class Inventory:
         self.button2.configure(activebackground="palevioletred")
         self.button2.configure(cursor="hand2")
         self.button2.configure(foreground="#ffffff")
-        self.button2.configure(background="#d46c91")
+        self.button2.configure(background="#3C3D52")
         self.button2.configure(font="-family {Poppins SemiBold} -size 12")
         self.button2.configure(borderwidth="0")
         self.button2.configure(text="""Cerrar""")
@@ -347,7 +347,7 @@ class Inventory:
         self.button3.configure(activebackground="palevioletred")
         self.button3.configure(cursor="hand2")
         self.button3.configure(foreground="#ffffff")
-        self.button3.configure(background="#d46c91")
+        self.button3.configure(background="#3C3D52")
         self.button3.configure(font="-family {Poppins SemiBold} -size 12")
         self.button3.configure(borderwidth="0")
         self.button3.configure(text="""AÑADIR""")
@@ -360,7 +360,7 @@ class Inventory:
         self.button4.configure(activebackground="palevioletred")
         self.button4.configure(cursor="hand2")
         self.button4.configure(foreground="#ffffff")
-        self.button4.configure(background="#d46c91")
+        self.button4.configure(background="#3C3D52")
         self.button4.configure(font="-family {Poppins SemiBold} -size 12")
         self.button4.configure(borderwidth="0")
         self.button4.configure(text="""ACTUALIZAR PRODUCTO""")
@@ -373,7 +373,7 @@ class Inventory:
         self.button5.configure(activebackground="palevioletred")
         self.button5.configure(cursor="hand2")
         self.button5.configure(foreground="#ffffff")
-        self.button5.configure(background="#d46c91")
+        self.button5.configure(background="#3C3D52")
         self.button5.configure(font="-family {Poppins SemiBold} -size 12")
         self.button5.configure(borderwidth="0")
         self.button5.configure(text="""ELIMINAR PRODUCTO""")
@@ -386,37 +386,11 @@ class Inventory:
         self.button6.configure(activebackground="palevioletred")
         self.button6.configure(cursor="hand2")
         self.button6.configure(foreground="#ffffff")
-        self.button6.configure(background="#d46c91")
+        self.button6.configure(background="#3C3D52")
         self.button6.configure(font="-family {Poppins SemiBold} -size 12")
         self.button6.configure(borderwidth="0")
         self.button6.configure(text="""Salir""")
         self.button6.configure(command=self.Exit)
-         #---menu---
-        self.menu1 = Button(inv)
-        self.menu1.place(relx=0.0, rely=0.0, width=86, height=20)
-        self.menu1.configure(relief="flat",overrelief="flat",activebackground="mistyrose",cursor="hand2",foreground="black",background="#d46c91",font=("-family {Poppins SemiBold} -size 10"))
-        self.menu1.configure(borderwidth="2")
-        self.menu1.configure(text="IMVENTARIO")
-       
-
-
-        self.menu2 = Button(inv)
-        self.menu2.place(relx=0.065, rely=0.0, width=86, height=20)
-        self.menu2.configure(relief="flat",overrelief="flat",activebackground="palevioletred",cursor="hand2",foreground="#ffffff",background="#d46c91",font=("-family {Poppins SemiBold} -size 10"))
-        self.menu2.configure(borderwidth="2")
-        self.menu2.configure(text="EMPLEADOS")
-        self.menu2.configure(command=menu1)
-
-
-
-        self.menu2 = Button(inv)
-        self.menu2.place(relx=0.130, rely=0.0, width=86, height=20)
-        self.menu2.configure(relief="flat",overrelief="flat",activebackground="palevioletred",cursor="hand2",foreground="#ffffff",background="#d46c91",font=("-family {Poppins SemiBold} -size 10"))
-        self.menu2.configure(borderwidth="2")
-        self.menu2.configure(text="""FACTURAS""")
-        self.menu2.configure(command=menu2)
-
-
 
         #--------------------------------
 
@@ -940,8 +914,8 @@ class Employee:
         self.message.place(relx=0.046, rely=0.055, width=136, height=30)
         self.message.configure(font="-family {Poppins} -size 10")
         self.message.configure(foreground="#000000")
-        self.message.configure(background="#ffffff")
-        self.message.configure(text="""ADMIN""")
+        self.message.configure(background="#3C3D52")
+        self.message.configure(text="""ROL: ADMIN""")
         self.message.configure(anchor="w")
 
         self.clock = Label(emp)
@@ -978,7 +952,7 @@ class Employee:
         self.button2.configure(background="#d46c91")
         self.button2.configure(font="-family {Poppins SemiBold} -size 12")
         self.button2.configure(borderwidth="0")
-        self.button2.configure(text="""Cerrar""")
+        self.button2.configure(text="""Cerrar Sesión""")
         self.button2.configure(command=self.Logout)
 
         self.button3 = Button(emp)
@@ -1805,7 +1779,8 @@ class Invoice:
 
 class open_bill:
     def __init__(self, top=None):
-        top.geometry("765x488")
+        screen_height = top.winfo_screenheight()
+        top.geometry("765x" + str(screen_height))
         top.title("Bill")
 
         self.label1 = Label(bill)
