@@ -117,7 +117,7 @@ class login_page:
         self.button1.configure(activebackground="palevioletred")
         self.button1.configure(cursor="hand2")
         self.button1.configure(foreground="#ffffff")
-        self.button1.configure(background="#d46c91")
+        self.button1.configure(background="#3E5043")
         self.button1.configure(font="'Impact'-size 20")
         self.button1.configure(borderwidth="0")
         self.button1.configure(text="""Inicio de sesion""")

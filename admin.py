@@ -1,4 +1,7 @@
 # ==================imports===================
+import os
+import pyautogui
+from PIL import Image, ImageWin
 import sqlite3
 import re
 import random
@@ -11,6 +14,9 @@ from tkinter.font import BOLD
 import tkinter as tk
 from datetime import date
 from tkinter import scrolledtext as tkst
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
+from PIL import Image, ImageGrab, ImageWin
 # ============================================
 
 root = Tk()
@@ -1799,9 +1805,7 @@ class Invoice:
 
 class open_bill:
     def __init__(self, top=None):
-        
         top.geometry("765x488")
-        top.resizable(0, 0)
         top.title("Bill")
 
         self.label1 = Label(bill)
@@ -1833,7 +1837,6 @@ class open_bill:
         self.bill_date_message.configure(borderwidth=0)
         self.bill_date_message.configure(background="#ffffff")
 
-
         self.Scrolledtext1 = tkst.ScrolledText(top)
         self.Scrolledtext1.place(relx=0.044, rely=0.41, width=695, height=284)
         self.Scrolledtext1.configure(borderwidth=0)
@@ -1859,6 +1862,34 @@ class open_bill:
             self.Scrolledtext1.configure(state="normal")
             self.Scrolledtext1.insert(END, results[0][4])
             self.Scrolledtext1.configure(state="disabled")
+
+        # Funciones de impresión
+        def print_bill():
+            # Capturar el contenido de la ventana en una imagen
+            top.update_idletasks()
+            top.after(500, capture_and_print)
+
+        def capture_and_print():
+            x = top.winfo_x() + 10
+            y = top.winfo_y() + 30
+            width = top.winfo_width()
+            height = top.winfo_height() - 50
+            
+            # Captura la imagen
+            screenshot = pyautogui.screenshot(region=(x, y, width, height))
+            
+            # Guarda la imagen (opcional)
+            screenshot.save("bill_screenshot.png")
+            
+            # Imprime la imagen
+            os.startfile("bill_screenshot.png", "print")
+
+        # Agrega un botón para imprimir la factura
+        self.print_button = Button(top, text="Imprimir", command=print_bill, background="#FFC300",padx=10, pady=5,activebackground="#45a049")
+        self.print_button.place(relx=0.42, rely=0.9)
+
+
+
 
 page1 = login_page(root)
 root.bind("<Return>", login_page.login)
