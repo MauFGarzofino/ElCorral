@@ -47,6 +47,7 @@ def valid_phone(phn):
         return True
     return False
 
+#Clase
 def login(Event=None):
     global username
     username = user.get()
@@ -58,7 +59,7 @@ def login(Event=None):
     cur.execute(find_user, [username, password])
     results = cur.fetchall()
     if results:
-        messagebox.showinfo("Login Page", "El inicio de sesión se completó")
+        messagebox.showinfo("Login Page", "Sesión iniciada")
         page1.entry1.delete(0, END)
         page1.entry2.delete(0, END)
         root.withdraw()
@@ -73,8 +74,6 @@ def login(Event=None):
     else:
         messagebox.showerror("Error", "Usario o contraseña incorrectas.")
         page1.entry2.delete(0, END)
-
-
 
 def logout():
     sure = messagebox.askyesno("Logout", "Estás seguro que quieres salir de la cuenta?", parent=biller)
@@ -186,7 +185,7 @@ class bill_window:
     def __init__(self, top=None):
         top.geometry("1366x768")
         top.resizable(0, 0)
-        top.title("Billing System")
+        top.title("Sistema de factura")
 
         self.label = Label(biller)
         self.label.place(relx=0, rely=0, width=1366, height=768)
@@ -427,7 +426,7 @@ class bill_window:
         find_qty = "SELECT stock FROM raw_inventory WHERE product_name = ?"
         cur.execute(find_qty, [product_name])
         results = cur.fetchone()
-        self.qty_label.configure(text="In Stock: {}".format(results[0]))
+        self.qty_label.configure(text="En Stock: {}".format(results[0]))
         self.qty_label.configure(background="#ffffff")
         self.qty_label.configure(foreground="#333333")
     

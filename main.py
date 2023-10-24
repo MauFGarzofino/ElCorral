@@ -6,7 +6,8 @@ from tkinter import messagebox
 main = Tk()
 main.geometry("1366x768")
 main.title("El Corral")
-main.resizable(0, 0)
+main.resizable(0, 0) #Redimensionar
+
 def Exit():
     sure = messagebox.askyesno("Salir","¿Seguro que quieres salir?", parent=main)
     if sure == True:
@@ -14,6 +15,7 @@ def Exit():
         
 main.protocol("WM_DELETE_WINDOW", Exit)
 
+#Funciones de navegación
 def emp():
     main.withdraw()
     os.system("python employee.py")
@@ -56,8 +58,9 @@ button2.configure(overrelief="flat")
 button2.configure(activebackground="#ffffff")
 button2.configure(cursor="hand2")
 button2.configure(foreground="#ffffff")
-button2.configure(background="#ffffff")
-button2.configure(borderwidth="0")
+button2.configure(background="#C9E7A3")
+button2.configure(borderwidth="2")
+
 img3 = PhotoImage(file="./images/administrador.png")
 button2.configure(image=img3)
 button2.configure(command=adm)

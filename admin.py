@@ -17,13 +17,13 @@ root = Tk()
 root.geometry("1366x768")
 root.title("ChurrasqueriaAPP")
 
-
+#Definición de variables globales
 user = StringVar()
 passwd = StringVar()
 fname = StringVar()
 lname = StringVar()
 
-
+#Se establece conexión a una base de datos SQLite
 with sqlite3.connect("./Database/store.db") as db:
     cur = db.cursor()
 
@@ -37,7 +37,7 @@ def valid_phone(phn):
         return True
     return False
 
-def valid_aadhar(aad):
+def valid_ci(aad):
     if aad.isdigit() and len(aad)==8:
         return True
     return False
@@ -1359,7 +1359,7 @@ class add_employee:
 
         if ename.strip():
             if valid_phone(econtact):
-                if valid_aadhar(eaddhar):
+                if valid_ci(eaddhar):
                     if edes:
                         if eadd:
                             if epass:
@@ -1484,7 +1484,7 @@ class Update_Employee:
 
         if ename.strip():
             if valid_phone(econtact):
-                if valid_aadhar(eaddhar):
+                if valid_ci(eaddhar):
                     if edes:
                         if eadd:
                             if epass:
