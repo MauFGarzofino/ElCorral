@@ -59,7 +59,7 @@ class login_page:
 
         self.label1 = Label(root)
         self.label1.place(relx=0, rely=0, width=1366, height=768)
-        self.img = PhotoImage(file="./images/admin_login.png")
+        self.img = PhotoImage(file="./images/admin_login1.png")
         self.label1.configure(image=self.img)
         
 
@@ -173,32 +173,6 @@ def invoices():
 
 def about():
     pass
-#------funciones menu
-def menu1 ():
-    inv.destroy()
-    employee()
-
-def menu2():
-    inv.destroy()
-    invoices()
-
-def menu3():
-    emp.destroy()
-    inventory()
-    
-def menu4():
-    emp.destroy()
-    invoices()
-
-def menu5():
-    invoice.destroy()
-    inventory()
-def menu6():
-    invoice.destroy()
-    employee()
-    
-
-
 
 class Admin_Page:
     def __init__(self, top=None):
@@ -318,7 +292,7 @@ class Inventory:
         self.button1.place(relx=0.229, rely=0.289, width=76, height=23)
         self.button1.configure(relief="flat")
         self.button1.configure(overrelief="flat")
-        self.button1.configure(activebackground="palevioletred")
+        self.button1.configure(activebackground="#3C3D52")
         self.button1.configure(cursor="hand2")
         self.button1.configure(foreground="#ffffff")
         self.button1.configure(background="#3C3D52")
@@ -331,7 +305,7 @@ class Inventory:
         self.button2.place(relx=0.035, rely=0.106, width=76, height=23)
         self.button2.configure(relief="flat")
         self.button2.configure(overrelief="flat")
-        self.button2.configure(activebackground="palevioletred")
+        self.button2.configure(activebackground="#3C3D52")
         self.button2.configure(cursor="hand2")
         self.button2.configure(foreground="#ffffff")
         self.button2.configure(background="#3C3D52")
@@ -344,20 +318,20 @@ class Inventory:
         self.button3.place(relx=0.052, rely=0.432, width=306, height=28)
         self.button3.configure(relief="flat")
         self.button3.configure(overrelief="flat")
-        self.button3.configure(activebackground="palevioletred")
+        self.button3.configure(activebackground="#3C3D52")
         self.button3.configure(cursor="hand2")
         self.button3.configure(foreground="#ffffff")
         self.button3.configure(background="#3C3D52")
         self.button3.configure(font="-family {Poppins SemiBold} -size 12")
         self.button3.configure(borderwidth="0")
-        self.button3.configure(text="""AÑADIR""")
+        self.button3.configure(text="""AÑADIR PRODUCTO""")
         self.button3.configure(command=self.add_product)
 
         self.button4 = Button(inv)
         self.button4.place(relx=0.052, rely=0.5, width=306, height=28)
         self.button4.configure(relief="flat")
         self.button4.configure(overrelief="flat")
-        self.button4.configure(activebackground="palevioletred")
+        self.button4.configure(activebackground="#3C3D52")
         self.button4.configure(cursor="hand2")
         self.button4.configure(foreground="#ffffff")
         self.button4.configure(background="#3C3D52")
@@ -370,7 +344,7 @@ class Inventory:
         self.button5.place(relx=0.052, rely=0.57, width=306, height=28)
         self.button5.configure(relief="flat")
         self.button5.configure(overrelief="flat")
-        self.button5.configure(activebackground="palevioletred")
+        self.button5.configure(activebackground="#3C3D52")
         self.button5.configure(cursor="hand2")
         self.button5.configure(foreground="#ffffff")
         self.button5.configure(background="#3C3D52")
@@ -383,7 +357,7 @@ class Inventory:
         self.button6.place(relx=0.135, rely=0.885, width=76, height=23)
         self.button6.configure(relief="flat")
         self.button6.configure(overrelief="flat")
-        self.button6.configure(activebackground="palevioletred")
+        self.button6.configure(activebackground="#3C3D52")
         self.button6.configure(cursor="hand2")
         self.button6.configure(foreground="#ffffff")
         self.button6.configure(background="#3C3D52")
@@ -1006,39 +980,10 @@ class Employee:
         self.button6.configure(borderwidth="0")
         self.button6.configure(text="""SALIR""")
         self.button6.configure(command=self.Exit)
-        #---------------------menu---------------------
+        #------------------------------------------
         
-        #---menu---
-        self.menu1 = Button(emp)
-        self.menu1.place(relx=0.0, rely=0.0, width=86, height=20)
-        self.menu1.configure(relief="flat",overrelief="flat",activebackground="palevioletred",cursor="hand2",foreground="#ffffff",background="#d46c91",font=("-family {Poppins SemiBold} -size 10"))
-        self.menu1.configure(borderwidth="2")
-        self.menu1.configure(text="IMVENTARIO")
-        self.menu1.configure(command=menu3)
-       
 
-
-        self.menu2 = Button(emp)
-        self.menu2.place(relx=0.065, rely=0.0, width=86, height=20)
-        self.menu2.configure(relief="flat",overrelief="flat",activebackground="mistyrose",cursor="hand2",foreground="black",background="#d46c91",font=("-family {Poppins SemiBold} -size 10"))
-        self.menu2.configure(borderwidth="2")
-        self.menu2.configure(text="EMPLEADOS")
-     
-
-
-
-        self.menu3 = Button(emp)
-        self.menu3.place(relx=0.130, rely=0.0, width=86, height=20)
-        self.menu3.configure(relief="flat",overrelief="flat",activebackground="palevioletred",cursor="hand2",foreground="#ffffff",background="#d46c91",font=("-family {Poppins SemiBold} -size 10"))
-        self.menu3.configure(borderwidth="2")
-        self.menu3.configure(text="""FACTURAS""")
-        self.menu3.configure(command=menu4)
-      
-
-
-
-        #--------------------------------
-        #---------------------menu--------------------
+        #-----------------------------------------
 
         self.scrollbarx = Scrollbar(emp, orient=HORIZONTAL)
         self.scrollbary = Scrollbar(emp, orient=VERTICAL)
@@ -1607,38 +1552,8 @@ class Invoice:
         self.button4.configure(borderwidth="0")
         self.button4.configure(text="""SALIR""")
         self.button4.configure(command=self.Exit)
-         #------MENU-----
-        #---menu---
-        self.menu1 = Button(invoice)
-        self.menu1.place(relx=0.0, rely=0.0, width=86, height=20)
-        self.menu1.configure(relief="flat",overrelief="flat",activebackground="palevioletred",cursor="hand2",foreground="#ffffff",background="#d46c91",font=("-family {Poppins SemiBold} -size 10"))
-        self.menu1.configure(borderwidth="2")
-        self.menu1.configure(text="IMVENTARIO")
-        self.menu1.configure(command=menu5)
-       
-
-
-        self.menu2 = Button(invoice)
-        self.menu2.place(relx=0.065, rely=0.0, width=86, height=20)
-        self.menu2.configure(relief="flat",overrelief="flat",activebackground="palevioletred",cursor="hand2",foreground="#ffffff",background="#d46c91",font=("-family {Poppins SemiBold} -size 10"))
-        self.menu2.configure(borderwidth="2")
-        self.menu2.configure(text="EMPLEADOS")
-        self.menu2.configure(command=menu6)
-     
-
-
-
-        self.menu3 = Button(invoice)
-        self.menu3.place(relx=0.130, rely=0.0, width=86, height=20)
-        self.menu3.configure(relief="flat",overrelief="flat",activebackground="mistyrose",cursor="hand2",foreground="black",background="#d46c91",font=("-family {Poppins SemiBold} -size 10"))
-        self.menu3.configure(borderwidth="2")
-        self.menu3.configure(text="""FACTURAS""")
-
-
-
+ 
         #-------------------
-
-
 
         self.scrollbarx = Scrollbar(invoice, orient=HORIZONTAL)
         self.scrollbary = Scrollbar(invoice, orient=VERTICAL)
