@@ -17,6 +17,7 @@ root = Tk()
 
 root.geometry("1366x768")
 root.title("Usuario Empleado")
+root.iconbitmap("rey.ico")
 
 
 user = StringVar()
@@ -90,7 +91,7 @@ class login_page:
     def __init__(self, top=None):
         top.geometry("1366x768")
         top.resizable(0, 0)
-        top.title("Retail Manager")
+        top.title("Inicio de sesión empleados")
 
         self.label1 = Label(root)
         self.label1.place(relx=0, rely=0, width=1366, height=768)

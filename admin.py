@@ -22,6 +22,7 @@ from PIL import Image, ImageGrab, ImageWin
 root = Tk()
 root.geometry("1366x768")
 root.title("ChurrasqueriaAPP")
+root.iconbitmap("rey.ico")
 
 #Definición de variables globales
 user = StringVar()
@@ -55,7 +56,7 @@ class login_page:
     def __init__(self, top=None):
         top.geometry("1366x768")
         top.resizable(0, 0)
-        top.title("ChurrasqueriaAPP(ADMIN)")
+        top.title("Incio de sesión ADMIN")
 
         self.label1 = Label(root)
         self.label1.place(relx=0, rely=0, width=1366, height=768)
@@ -526,7 +527,7 @@ class Inventory:
         self.clock.after(1000, self.time)
 
     def Exit(self):
-        sure = messagebox.askyesno("Salir","Estás sehuro de salir?", parent=inv)
+        sure = messagebox.askyesno("Salir","Estás seguro de salir?", parent=inv)
         if sure == True:
             inv.destroy()
             adm.deiconify()
@@ -877,7 +878,7 @@ class Employee:
     def __init__(self, top=None):
         top.geometry("1366x768")
         top.resizable(0, 0)
-        top.title("Employee Management")
+        top.title("Gestión de Empleados")
 
         self.label1 = Label(emp)
         self.label1.place(relx=0, rely=0, width=1366, height=768)
@@ -1475,7 +1476,7 @@ class Invoice:
     def __init__(self, top=None):
         top.geometry("1366x768")
         top.resizable(0, 0)
-        top.title("Invoices")
+        top.title("Facturas")
 
         self.label1 = Label(invoice)
         self.label1.place(relx=0, rely=0, width=1366, height=768)
@@ -1694,8 +1695,7 @@ class Invoice:
 
 class open_bill:
     def __init__(self, top=None):
-        screen_height = top.winfo_screenheight()
-        top.geometry("765x" + str(screen_height))
+        top.geometry("765x488")
         top.title("Bill")
 
         self.label1 = Label(bill)
